@@ -447,7 +447,8 @@ header nav .search i {
   top: 55%;
   left: -5%;
 }
-.exp-desc h3 {
+
+.exp-desc h4 {
   color: #fbfbfb;
   font-size: 20px;
   font-weight: 400;
@@ -459,7 +460,9 @@ header nav .search i {
   font-size: 16;
   font-weight: 400;
 }
-
+.exp{
+  margin-bottom:100px ;
+}
 .contact-me {
   width: 100vw;
   height: 100vh;
@@ -507,5 +510,8 @@ header nav .search i {
  }
  .skills{
   padding-top: 90px;
+ }
+ .details-containers{
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
  }
  
