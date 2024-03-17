@@ -73,6 +73,15 @@
     z-index: 1;
     bottom: 10%;
   }
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
   .img-rock {
     z-index: 2;
     bottom: 10%;
@@ -792,7 +801,7 @@
       height: 30vw;
     }
   }
-  .loader-container {
+  .loading-text{
     position: fixed;
     top: 0;
     left: 0;
@@ -803,25 +812,92 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-}
+  }
 
-.loader {
-    border: 4px solid #f3f3f3;
-    border-top: 4px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 2s linear infinite;
-}
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
+
+
 
 .container {
     opacity: 0;
 }
+.loader {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+
+  .loader div {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #007bff;
+    border-radius: 50%;
+    animation: loader-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  }
+
+  .loader div:nth-child(1) {
+    top: 12px;
+    left: 12px;
+    animation-delay: 0s;
+  }
+
+  .loader div:nth-child(2) {
+    top: 12px;
+    left: 48px;
+    animation-delay: -0.4s;
+  }
+
+  .loader div:nth-child(3) {
+    top: 12px;
+    left: 84px;
+    animation-delay: -0.8s;
+  }
+
+  .loader div:nth-child(4) {
+    top: 48px;
+    left: 12px;
+    animation-delay: -0.4s;
+  }
+
+  .loader div:nth-child(5) {
+    top: 48px;
+    left: 48px;
+    animation-delay: -0.8s;
+  }
+
+  .loader div:nth-child(6) {
+    top: 48px;
+    left: 84px;
+    animation-delay: -1.2s;
+  }
+
+  .loader div:nth-child(7) {
+    top: 84px;
+    left: 12px;
+    animation-delay: -0.8s;
+  }
+
+  .loader div:nth-child(8) {
+    top: 84px;
+    left: 48px;
+    animation-delay: -1.2s;
+  }
+
+  .loader div:nth-child(9) {
+    top: 84px;
+    left: 84px;
+    animation-delay: -1.6s;
+  }
+
+  @keyframes loader-animation {
+    0%, 100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
  
  
   /* #main{

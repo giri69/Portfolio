@@ -17,32 +17,14 @@ const scroll = new LocomotiveScroll({
       breakpoint: 1024,
     },
   });
-  document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('img');
-    let imagesLoaded = 0;
 
-    function imageLoaded() {
-        imagesLoaded++;
-        if (imagesLoaded === images.length) {
-            const loader = document.querySelector('.loader-container');
-            const container = document.querySelector('.container');
 
-            setTimeout(() => {
-                loader.style.display = 'none';
-                container.style.opacity = '1';
-                locoScroll.update(); // Update Locomotive Scroll
-            }, 1000); // Adjust the duration as needed
-        }
-    }
-
-    images.forEach(img => {
-        if (img.complete) {
-            imageLoaded();
-        } else {
-            img.addEventListener('load', imageLoaded);
-        }
-    });
-
-    
-});
+function showWebsiteContent() {
+    document.getElementById('main').classList.remove('hidden');
+    document.getElementById('main').classList.add('visible');
+    document.querySelector('.loading-text').classList.add('hidden');
+  }
+  
+  // Show website content after 4 seconds
+  setTimeout(showWebsiteContent, 3000);
   
