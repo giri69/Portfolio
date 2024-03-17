@@ -38,6 +38,15 @@
     text-align: center;
     font-size: 10vw;
     font-weight: 900;
+    animation: moveDown 5s ease-in-out forwards;
+  }
+  @keyframes moveDown {
+    0% {
+      top: -200px; /* Start position */
+    }
+    100% {
+      top: calc(5vh - 10px); /* End position */
+    }
   }
   .play-btn {
     cursor: pointer;
